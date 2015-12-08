@@ -1,0 +1,145 @@
+#!/bin/bash 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd "$( dirname "${BASH_SOURCE[0]}" )"
+mkdir AppIcon.appiconset
+for file in *logo.png; do convert $file -resize 60x60 AppIcon.appiconset/${file%\.*}_60x60.png; done
+for file in *logo.png; do convert $file -resize 120x120 AppIcon.appiconset/${file%\.*}_120x120.png; done
+for file in *logo.png; do convert $file -resize 180x180 AppIcon.appiconset/${file%\.*}_180x180.png; done
+for file in *logo.png; do convert $file -resize 72x72 AppIcon.appiconset/${file%\.*}_72x72.png; done
+for file in *logo.png; do convert $file -resize 144x144 AppIcon.appiconset/${file%\.*}_144x144.png; done
+for file in *logo.png; do convert $file -resize 76x76 AppIcon.appiconset/${file%\.*}_76x76.png; done
+for file in *logo.png; do convert $file -resize 152x152 AppIcon.appiconset/${file%\.*}_152x152.png; done
+for file in *logo.png; do convert $file -resize 40x40 AppIcon.appiconset/${file%\.*}_40x40.png; done
+for file in *logo.png; do convert $file -resize 80x80 AppIcon.appiconset/${file%\.*}_80x80.png; done
+for file in *logo.png; do convert $file -resize 120x120 AppIcon.appiconset/${file%\.*}_120x120.png; done
+for file in *logo.png; do convert $file -resize 50x50 AppIcon.appiconset/${file%\.*}_50x50.png; done
+for file in *logo.png; do convert $file -resize 100x100 AppIcon.appiconset/${file%\.*}_100x100.png; done
+for file in *logo.png; do convert $file -resize 29x29 AppIcon.appiconset/${file%\.*}_29x29.png; done
+for file in *logo.png; do convert $file -resize 58x58 AppIcon.appiconset/${file%\.*}_58x58.png; done
+for file in *logo.png; do convert $file -resize 87x87 AppIcon.appiconset/${file%\.*}_87x87.png; done
+for file in *logo.png; do convert $file -resize 57x57 AppIcon.appiconset/${file%\.*}_57x57.png; done
+for file in *logo.png; do convert $file -resize 114x114 AppIcon.appiconset/${file%\.*}_114x114.png; done
+for file in *logo.png; do convert $file -resize 1024x1024 AppIcon.appiconset/${file%\.*}_iTunesConnect@2x.png; done
+for file in *logo.png; do convert $file -resize 512x512 AppIcon.appiconset/${file%\.*}_iTunesConnect.png; done
+for file in *logo.png; do echo "{
+  \"images\" : [
+    {
+      \"size\" : \"29x29\",
+      \"idiom\" : \"iphone\",
+      \"filename\" : \"${file%\.*}_29x29.png\",
+      \"scale\" : \"1x\"
+    },
+    {
+      \"size\" : \"29x29\",
+      \"idiom\" : \"iphone\",
+      \"filename\" : \"${file%\.*}_58x58.png\",
+      \"scale\" : \"2x\"
+    },
+    {
+      \"size\" : \"29x29\",
+      \"idiom\" : \"iphone\",
+      \"filename\" : \"${file%\.*}_87x87.png\",
+      \"scale\" : \"3x\"
+    },
+    {
+      \"size\" : \"40x40\",
+      \"idiom\" : \"iphone\",
+      \"filename\" : \"${file%\.*}_80x80.png\",
+      \"scale\" : \"2x\"
+    },
+    {
+      \"size\" : \"40x40\",
+      \"idiom\" : \"iphone\",
+      \"filename\" : \"${file%\.*}_120x120.png\",
+      \"scale\" : \"3x\"
+    },
+    {
+      \"idiom\" : \"iphone\",
+      \"size\" : \"57x57\",
+      \"filename\" : \"${file%\.*}_57x57.png\",
+      \"scale\" : \"1x\"
+    },
+    {
+      \"idiom\" : \"iphone\",
+      \"size\" : \"57x57\",
+      \"filename\" : \"${file%\.*}_114x114.png\",
+      \"scale\" : \"2x\"
+    },
+    {
+      \"size\" : \"60x60\",
+      \"idiom\" : \"iphone\",
+      \"filename\" : \"${file%\.*}_120x120.png\",
+      \"scale\" : \"2x\"
+    },
+    {
+      \"idiom\" : \"iphone\",
+      \"size\" : \"60x60\",
+      \"filename\" : \"${file%\.*}_180x180.png\",
+      \"scale\" : \"3x\"
+    },
+    {
+      \"size\" : \"29x29\",
+      \"idiom\" : \"ipad\",
+      \"filename\" : \"${file%\.*}_29x29.png\",
+      \"scale\" : \"1x\"
+    },
+    {
+      \"size\" : \"29x29\",
+      \"idiom\" : \"ipad\",
+      \"filename\" : \"${file%\.*}_58x58.png\",
+      \"scale\" : \"2x\"
+    },
+    {
+      \"size\" : \"40x40\",
+      \"idiom\" : \"ipad\",
+      \"filename\" : \"${file%\.*}_40x40.png\",
+      \"scale\" : \"1x\"
+    },
+    {
+      \"size\" : \"40x40\",
+      \"idiom\" : \"ipad\",
+      \"filename\" : \"${file%\.*}_80x80.png\",
+      \"scale\" : \"2x\"
+    },
+    {
+      \"idiom\" : \"ipad\",
+      \"size\" : \"50x50\",
+      \"filename\" : \"${file%\.*}_50x50.png\",
+      \"scale\" : \"1x\"
+    },
+    {
+      \"idiom\" : \"ipad\",
+      \"size\" : \"50x50\",
+      \"filename\" : \"${file%\.*}_100x100.png\",
+      \"scale\" : \"2x\"
+    },
+    {
+      \"idiom\" : \"ipad\",
+      \"size\" : \"72x72\",
+      \"filename\" : \"${file%\.*}_72x72.png\",
+      \"scale\" : \"1x\"
+    },
+    {
+      \"idiom\" : \"ipad\",
+      \"size\" : \"72x72\",
+      \"filename\" : \"${file%\.*}_144x144.png\",
+      \"scale\" : \"2x\"
+    },
+    {
+      \"size\" : \"76x76\",
+      \"idiom\" : \"ipad\",
+      \"filename\" : \"${file%\.*}_76x76.png\",
+      \"scale\" : \"1x\"
+    },
+    {
+      \"size\" : \"76x76\",
+      \"idiom\" : \"ipad\",
+      \"filename\" : \"${file%\.*}_152x152.png\",
+      \"scale\" : \"2x\"
+    }
+  ],
+  \"info\" : {
+    \"version\" : 1,
+    \"author\" : \"xcode\"
+  }
+}" > AppIcon.appiconset/Contents.json; done
